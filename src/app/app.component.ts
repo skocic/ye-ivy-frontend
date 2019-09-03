@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'shiny-ivy-app';
+  title = 'Ivy Frontend';
+
+  throwError() {
+    throw new Error('An unhandled error happened');
+  }
+
+  throwHandledError() {
+    try {
+      throw new Error('An error happened');
+    } catch (error) {
+      console.error('Log error', error);
+    }
+    console.log('Script execution continues');
+  }
 }

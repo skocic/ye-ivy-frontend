@@ -4,12 +4,20 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<h2>Bootstrap example: </h2>
+<h2>Example: </h2>
 <ul>
   <li>
     <button type="button" class="btn btn-primary"
-      tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Button with tooltip
+      tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+      (click)="throwError();">
+      Throw Error
+    </button>
+  </li>
+  <li>
+    <button type="button" class="btn btn-primary"
+      tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+      (click)="throwHandledError();">
+      Throw Handled Error
     </button>
   </li>
 </ul>
